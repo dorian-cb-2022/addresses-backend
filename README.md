@@ -7,3 +7,4 @@ On the backend part uses the django_tenants package to support multi-tenancy and
 On the front end part, uses templates to manage the views. It simply uses a 
 
 # CI/CD
+
