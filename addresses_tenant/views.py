@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
-from ./models import Address
+from .models import Address
 
 def address_detail():
     address_objs = Address.objects.get()
