@@ -25,11 +25,11 @@
       </tr>
     </thead>
     <tbody>
-      {% for address_name, latitude, longitude in addresses %}
+      {% for add in addresses %}
       <tr>
-        <td>{{address_name|safe}}</td>
-        <td>{{latitude}}</td>
-        <td>{{longitude}}</td>   
+        <td>{{add.address_name|safe}}</td>
+        <td>{{add.latitude}}</td>
+        <td>{{add.longitude}}</td>   
       </tr>
       {% endfor %}
     </tbody>
