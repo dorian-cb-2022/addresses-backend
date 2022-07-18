@@ -25,9 +25,9 @@
       </tr>
     </thead>
     <tbody>
-      {% for address, latitude, longitude in address_objs %}
+      {% for address_name, latitude, longitude in addresses %}
       <tr>
-        <td>{{address|safe}}</td>
+        <td>{{address_name|safe}}</td>
         <td>{{latitude}}</td>
         <td>{{longitude}}</td>   
       </tr>
