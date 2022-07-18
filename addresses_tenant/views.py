@@ -8,7 +8,7 @@ Basic view for routing
 def route(request):
 
 	context = {"google_api_key": settings.GOOGLE_API_KEY}
-	return render(request, 'atenant/route.html', context)
+	return render(request, 'addresses_tenant/route.html', context)
 
 '''
 Basic view for displaying a map 
@@ -25,4 +25,4 @@ def map(request):
 	"lon": lon,
 	}
     
-	return render(request, 'atenant/map.html', context)
+	return render(request, 'addresses_tenant/map.html', context)
