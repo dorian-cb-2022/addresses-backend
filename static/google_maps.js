@@ -7,11 +7,10 @@ $.getScript( "https://maps.googleapis.com/maps/api/js?key=" + google_api_key + "
 
 
 function initMap() {
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
+    console.log("Initializing Map");
     var map = new google.maps.Map(document.getElementById('map-route'), {
         zoom: 7,
         center: {lat: lat, lng: lon}
     });
-    directionsDisplay.setMap(map);
+    console.log("Map is ready");
 }
