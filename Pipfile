@@ -15,6 +15,7 @@ pytz = "*"
 requests = "*"
 sqlparse = "*"
 urllib3 = "*"
+django-js-logger = "*"
 
 [dev-packages]
 

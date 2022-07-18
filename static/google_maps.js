@@ -8,9 +8,11 @@ $.getScript( "https://maps.googleapis.com/maps/api/js?key=" + google_api_key + "
 
 function initMap() {
     console.log("Initializing Map");
+    console.log(addresses)
     var map = new google.maps.Map(document.getElementById('map-route'), {
         center: { lat: lat, lng: lon },
         zoom: 8,
     });
     console.log("Map is ready");
 }
+
