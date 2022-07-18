@@ -7,6 +7,14 @@ name = "pypi"
 django = "~=3.0"
 django-tenants = "*"
 psycopg2 = "*"
+asgiref = "*"
+certifi = "*"
+chardet = "*"
+idna = "*"
+pytz = "*"
+requests = "*"
+sqlparse = "*"
+urllib3 = "*"
 
 [dev-packages]
 
