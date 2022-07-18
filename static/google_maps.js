@@ -10,7 +10,6 @@ function initMap() {
     console.log("Initializing Map");
     var map = new google.maps.Map(document.getElementById('map-route'), {
         zoom: 7,
-        center: {lat: lat, lng: lon}
     });
     console.log("Map is ready");
 }
