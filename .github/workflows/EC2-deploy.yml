@@ -16,6 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Deploy ECR CFN stack
+      continue-on-error: true
       id: ecr
       uses: mgenteluci/cloudformation-deploy-action@v1.4.1
       env:
