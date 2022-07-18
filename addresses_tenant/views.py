@@ -2,14 +2,6 @@ from django.shortcuts import render
 from django.conf import settings
 
 '''
-Basic view for routing 
-'''
-def route(request):
-
-	context = {"google_api_key": settings.GOOGLE_API_KEY}
-	return render(request, 'addresses_tenant/route.html', context)
-
-'''
 Basic view for displaying a map 
 '''
 def map(request):
