@@ -9,7 +9,7 @@ $.getScript( "https://maps.googleapis.com/maps/api/js?key=" + google_api_key + "
 function initMap() {
     console.log("Initializing Map");
     var map = new google.maps.Map(document.getElementById('map-route'), {
-        center: { lat: add[0].latitude, lng: add[0].longitude },
+        center: { lat: addresses[0].latitude, lng: addresses[0].longitude },
         zoom: 8,
     });
     console.log("Map is ready");
