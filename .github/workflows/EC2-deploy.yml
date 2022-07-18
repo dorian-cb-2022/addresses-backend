@@ -32,7 +32,7 @@ jobs:
       id: ecr
       uses: mgenteluci/cloudformation-deploy-action@v1.4.1
       env:
-        TEMPLATE: ${{ github.event.inputs.template-path }}
+        TEMPLATE: ${{ github.event.inputs.ecr-template-path }}
         AWS_STACK_NAME: ${{ github.event.inputs.service-name }}-ECR
         AWS_REGION: ${{ github.event.inputs.region }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -40,5 +40,11 @@ jobs:
         AWS_DEPLOY_BUCKET: ${{ secrets.AWS_DEPLOY_BUCKET }}
         PARAMETER_OVERRIDES: >
           RepositoryName=${{ github.event.inputs.service-name }}-web-app
+
+    - name: Get ECR Arn
+      id: ecr-arn
+      run: |
+        aws cloudformation --region ${{ github.event.inputs.region }} describe-stacks --stack-name ${{ github.event.inputs.service-name }}-ECR
+
 
     
