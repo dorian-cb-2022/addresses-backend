@@ -3,7 +3,7 @@ from django.conf import settings
 from .models import Address
 
 def address_detail(request):
-    address_objs = Address.objects.get()
+    address_objs = Address.objects.all()
 
     context = {
         "addresses": address_objs,
