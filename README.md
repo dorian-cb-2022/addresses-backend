@@ -20,3 +20,7 @@ The rest was uploaded manually.
 The Templates can be improved further, the same as the workflow. For example, the workflow is using secrets when environment variables could have been used. They are also incomplete, so that is an obvious improvement. And there are security vulnerabilities that haven't been addressed for a fast development.
 
 I'm also not very familiarized with django, so I'm pretty sure there are a lot of different ways the code can improve that I'm not aware of.
+
+However, one error I know I made for sure was putting the DB connection details inside the settings.py. I didn't have the time to fix it as I wanted to as I couldn't get to finish the CI/CD for the project.
+
+Another evident improvement is separating the frontend and the backend. It would allow us to use the best tool for the job, instead of trying to solve everything with django. It would also enhance the escalability of the app, because the backend and the frontend could scale independently based on each's needs.
