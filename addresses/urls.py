@@ -22,6 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include("django.contrib.auth.urls")),
-    path('addresses', include('addresses_tenant.urls', namespace='addresses_tenant')),
+    path('addresses/', include('addresses_tenant.urls', namespace='addresses_tenant')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]
