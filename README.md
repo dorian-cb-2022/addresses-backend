@@ -24,3 +24,10 @@ I'm also not very familiarized with django, so I'm pretty sure there are a lot o
 However, one error I know I made for sure was putting the DB connection details inside the settings.py. I didn't have the time to fix it as I wanted to as I couldn't get to finish the CI/CD for the project.
 
 Another evident improvement is separating the frontend and the backend. It would allow us to use the best tool for the job, instead of trying to solve everything with django. It would also enhance the escalability of the app, because the backend and the frontend could scale independently based on each's needs.
+
+# How to Run
+
+Simply build and run the Dockerfile exposing the port 8000, it can be done the following way:
+
+docker build -t addresses-web-app .
+docker run --name demo-run -p 8000:8000 addresses-web-app
