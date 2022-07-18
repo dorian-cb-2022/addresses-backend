@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  RepositoryName:
+    Default: myecr
+    Description: Name of the repository
+    Type: String
+
+Resources:
+  MyRepository: 
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: !Ref RepositoryName
+
+Outputs:
+  ECRArn:
+    Description: ARN of the ECR created
+    Value: !GetAtt MyRepository.Arn
+    Export:
+      Name: !Sub ${RepositoryName}-Arn
