@@ -17,7 +17,7 @@ def map(request):
 	lat = request.GET.get("lat")
 	lon = request.GET.get("lon")
 
-    print(name)
+	print(name)
 
 	context = {
 	"google_api_key": settings.GOOGLE_API_KEY,
