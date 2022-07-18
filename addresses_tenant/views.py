@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
 
-from .mixins import Directions
 '''
 Basic view for routing 
 '''
