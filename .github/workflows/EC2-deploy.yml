@@ -40,7 +40,7 @@ jobs:
         secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         region: ${{ secrets.REGION }}
         local-image: addresses_docker
-        image: addresses_docker:latest
+        image: addresses-web-app
 
 
     
