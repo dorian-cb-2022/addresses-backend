@@ -35,7 +35,7 @@ jobs:
         docker build -t addresses_docker .
     
     - name: Push to ECR
-      id: ecr
+      id: ecr-push
       uses: jwalton/gh-ecr-push@v1
       with:
         access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
