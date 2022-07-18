@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.conf import settings
 from .models import Address
 
-def address_detail():
+def address_detail(request):
     address_objs = Address.objects.get()
 
     context = {
