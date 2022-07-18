@@ -7,7 +7,7 @@
 </head>
 <body>
   <p>
-    {% block content %}
+    {% block authenticated %}
     {% if user.is_authenticated %}
       Welcome, {{ user.username }}!
       <a href="{% url 'logout' %}">Log Out</a>
@@ -16,9 +16,6 @@
       <a href="{% url 'login' %}">Log In</a>
     {% endif %}
     {% endblock %}
-
-
-    <a href="{% url 'logout' %}">Log Out</a>
   </p>
   <main>
     {% block content %}
