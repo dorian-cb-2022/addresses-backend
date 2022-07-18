@@ -15,7 +15,7 @@ Basic view for displaying a map
 '''
 def map(request):
 
-    name = request.GET.get("name")
+	name = request.GET.get("name")
 	lat = request.GET.get("lat")
 	lon = request.GET.get("lon")
 
