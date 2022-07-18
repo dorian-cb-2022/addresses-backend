@@ -30,9 +30,7 @@ jobs:
           RepositoryName=${{ secrets.SERVICE_NAME }}-web-app
 
     - name: Build docker image
-      run: |
-        cd addresses
-        docker build -t addresses_docker .
+      run: docker build -t addresses_docker .
     
     - name: Push to ECR
       id: ecr-push
