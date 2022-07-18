@@ -6,6 +6,6 @@ app_name = "addresses_tenant"
 
 urlpatterns = [
 	
-	path('', views.map, name="map"),
+	path('', views.address_detail, name="address_detail"),
 
 	]
