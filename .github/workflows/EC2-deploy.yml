@@ -4,19 +4,19 @@ on:
   push:
     branches:    
       - 'main'
-    inputs:
-      region:
-        description: 'AWS Region'
-        required: true
-        default: 'us-east-1'
-      ecr-template-path:
-        description: 'CFN template path for the ECR inside repo'
-        required: true
-        default: 'deploy/cloudformation/registry.yaml'
-      service-name:
-        description: 'Name of the service this template will be used in'
-        required: true
-        default: 'addresses'
+      inputs:
+        region:
+          description: 'AWS Region'
+          required: true
+          default: 'us-east-1'
+        ecr-template-path:
+          description: 'CFN template path for the ECR inside repo'
+          required: true
+          default: 'deploy/cloudformation/image-registry.yaml'
+        service-name:
+          description: 'Name of the service this template will be used in'
+          required: true
+          default: 'addresses'
 
 jobs:
   deploy:
