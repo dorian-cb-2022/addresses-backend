@@ -32,7 +32,13 @@ jobs:
     - name: Get ECR Arn
       id: ecr-arn
       run: |
-        aws cloudformation --region ${{ secrets.REGION }} describe-stacks --stack-name ${{ secrets.SERVICE_NAME }}-ECR
+        ECRArn=$(aws cloudformation --region ${{ secrets.REGION }} describe-stacks |
+        --stack-name ${{ secrets.SERVICE_NAME }}-ECR |
+        --query "Stacks[0].Outputs[?Export=='ECRArn'].OutputValue" --output text)
+
+        echo "ECR Arn: $ECRArn"
+        echo "::set-output name=ecr-arn::$ECRArn"
+
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
